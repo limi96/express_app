@@ -14,6 +14,9 @@ jobs:
     steps:
     # Checkout to the repository
     - uses: actions/checkout@v2
+    - uses: isbang/compose-action@v1.4.1
+        with:
+          compose-file: "./docker-compose.yml"
 
     # We need to login so we can later push the image without issues.
     - name: Login to Docker Hub
