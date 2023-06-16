@@ -31,3 +31,5 @@ jobs:
       with:
         push: true
         tags: limi96/express_app:latest
+    - name: Stop container
+      run: docker-compose -f "docker-compose.yml" down
